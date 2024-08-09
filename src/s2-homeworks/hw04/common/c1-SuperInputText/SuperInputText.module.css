@@ -1,7 +1,21 @@
 .input:focus {
+    border-color: black;
 }
 
 .input {
+    display: flex;
+    width: 372px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #D1D1D1;
+    padding-left: 12px;
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .inputWrapper {
@@ -11,10 +25,18 @@
 }
 
 .errorInput {
+    border: 1px solid #CC1439;
 }
 
 .errorInput:focus {
+    outline: 1px solid #CC1439;
 }
 
 .error {
+    position: absolute;
+    transform: translateY(-15px);
+    color: #CC1439;
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
 }
