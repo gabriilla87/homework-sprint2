@@ -1,18 +1,26 @@
 .sidebar {
-    display: none;
-}
-
-.sidebar.open {
-    top: 0;
-    left: 0;
-    width: 316px;
-    height: 100vh;
+    z-index: 999;
     position: fixed;
-    background-color: #FFFFFF;
+    transition: 0.3s ease-in;
     display: flex;
     padding-left: 70px;
     flex-direction: column;
-    z-index: 999;
+
+    height: 100vh;
+    width: 316px;
+    left: -316px;
+    top: 0;
+
+    background-color: #FFF;
+}
+
+.sidebar.open {
+    position: fixed;
+    transition: 0.3s ease-out;
+
+    left: 0;
+    box-shadow: 0 10px 40px rgba(29, 33, 38, 0.13),
+    0 1px 2px rgba(29, 33, 38, 0.1);
 }
 
 .background {
