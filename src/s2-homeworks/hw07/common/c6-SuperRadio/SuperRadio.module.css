@@ -2,7 +2,7 @@
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    accent-color: blue;
+    accent-color: black;
 }
 
 .radio::before {
