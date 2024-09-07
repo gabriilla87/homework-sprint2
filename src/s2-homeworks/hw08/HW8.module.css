@@ -1,23 +1,46 @@
-.item {
+.item, .infoItem{
+    height: 36px;
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.infoItem {
+    background-color: #E5E5E5;
 }
 
 .item:last-of-type {
 }
 
 .users {
+    width: 100%;
+    margin-top: 18px;
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 .container {
+    width: 606px;
 }
 
 .thead {
 }
 
 .nameCol {
+    border-top: 1px solid #E5E5E5;
+    width: 304px;
+    padding-left: 18px;
 }
 
 .ageCol {
+    border-top: 1px solid #E5E5E5;
+    margin-left: 0;
+    font-weight: 600;
 }
