@@ -31,26 +31,27 @@ function Clock() {
         setShow(false)
     }
 
-    const setOptionsToFormatter = (options: { [key: string]: any }) => {
-        return new Intl.DateTimeFormat('en-EN', options).format(date)
+    const setOptionsToFormatter = (region: string, options: { [key: string]: any }) => {
+        return new Intl.DateTimeFormat(region, options).format(date)
     }
 
-    const stringTime = `${setOptionsToFormatter(
+    const stringTime = `${setOptionsToFormatter("en-EN",
         {
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
             hour12: false
         })}` || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = `${setOptionsToFormatter({
+    const stringDate = `${setOptionsToFormatter("ru-RU",
+        {
             day: '2-digit',
             month: '2-digit',
             year: 'numeric',
         }).replace(/\//g, '.')}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = `${setOptionsToFormatter({weekday: 'long'})}` || <br/> // пишут студенты
-    const stringMonth = `${setOptionsToFormatter({month: 'long'})}` || <br/> // пишут студенты
+    const stringDay = `${setOptionsToFormatter("en-EN",{weekday: 'long'})}` || <br/> // пишут студенты
+    const stringMonth = `${setOptionsToFormatter("en-EN",{month: 'long'})}` || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
