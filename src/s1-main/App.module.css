@@ -1,5 +1,5 @@
 .App {
-    padding-top: 80px;
+    padding-top: 60px;
     --header_height: 60px;
     width: 100%;
     display: flex;
@@ -19,6 +19,7 @@
 .hwTitle {
     margin-left: 70px;
     margin-bottom: 10px;
+    margin-top: 36px;
     color: #000;
     font-family: Montserrat, sans-serif;
     font-size: 22px;

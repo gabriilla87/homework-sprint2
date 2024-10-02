@@ -1,3 +1,12 @@
 .loader {
     /*свг и/или анимация*/
+    margin-top: 24px;
+    width: 90px;
+    height: 90px;
+    animation: spin 1s linear infinite; /* Анимация */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
