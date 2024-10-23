@@ -37,7 +37,10 @@ const HW14 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
-
+                if(res?.data.techs) {
+                    setTechs( res.data.techs )
+                }
+                setLoading(false)
                 //
             })
     }
@@ -47,7 +50,7 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
+        setSearchParams({find: value})
 
         //
     }
@@ -68,12 +71,13 @@ const HW14 = () => {
         <div id={'hw14'}>
             <div className={s2.hwTitle}>Homework #14</div>
 
-            <div className={s2.hw}>
+            <div className={s2.hw} style={{height: "336px"}}>
                 <SuperDebouncedInput
                     id={'hw14-super-debounced-input'}
                     value={find}
                     onChangeText={onChangeText}
                     onDebouncedChange={sendQuery}
+                    style={{width: "468px"}}
                 />
 
                 <div id={'hw14-loading'} className={s.loading}>
